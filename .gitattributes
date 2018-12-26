@@ -15,5 +15,6 @@
 *.psd1    eol=crlf
 *.ps1xml  eol=crlf
 *.bat     eol=crlf
+*.cmd     eol=crlf
 
 *.pdf     -text
