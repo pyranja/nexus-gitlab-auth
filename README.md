@@ -1,4 +1,4 @@
-# nexus gitlab auth plugin
+# nexus gitlab auth plugin [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![Build Status](https://travis-ci.com/pyranja/nexus-gitlab-auth.svg?branch=master)](https://travis-ci.com/pyranja/nexus-gitlab-auth)
 
 ## License
 
