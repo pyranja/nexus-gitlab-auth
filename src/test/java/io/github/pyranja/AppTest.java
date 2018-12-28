@@ -50,6 +50,7 @@ public class AppTest
      */
     public void testApp()
     {
-        App.main(new String[0]);
+      new App();
+      App.main(new String[0]);
     }
 }
