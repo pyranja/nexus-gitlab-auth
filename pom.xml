@@ -250,6 +250,7 @@
             <!-- dot files in project root -->
             <exclude>.*</exclude>
             <!-- meta files -->
+            <exclude>Makefile</exclude>
             <exclude>LICENSE</exclude>
             <exclude>README</exclude>
           </excludes>
