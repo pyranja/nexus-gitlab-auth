@@ -8,3 +8,7 @@ help: ## show this help message
 .PHONY: quick
 quick: ## run quick build
 	@./mvnw --activate-profiles quick install
+
+.PHONY: license-fmt
+license-fmt: ## add missing license headers
+	@./mvnw license:format
