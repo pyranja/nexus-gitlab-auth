@@ -76,6 +76,18 @@
     <owner.email>chris.borckholder@gmail.com</owner.email>
   </properties>
 
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.sonatype.nexus.plugins</groupId>
+        <artifactId>nexus-plugins</artifactId>
+        <version>3.14.0-04</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -117,6 +129,39 @@
       </plugin>
 
       <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <version>4.1.0</version>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.karaf.tooling</groupId>
+        <artifactId>karaf-maven-plugin</artifactId>
+        <version>4.2.2</version>
+        <executions>
+          <execution>
+            <id>karaf-plugin-feature</id>
+            <goals>
+              <goal>features-generate-descriptor</goal>
+            </goals>
+            <configuration>
+              <includeProjectArtifact>true</includeProjectArtifact>
+            </configuration>
+          </execution>
+          <execution>
+            <id>karaf-kar</id>
+            <goals>
+              <goal>kar</goal>
+            </goals>
+            <configuration>
+              <resourcesDir>${project.basedir}/src/main/kar-resources</resourcesDir>
+              <classifier>bundle</classifier>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.0.0-M3</version>
       </plugin>
@@ -135,7 +180,6 @@
         <artifactId>maven-deploy-plugin</artifactId>
         <version>3.0.0-M1</version>
       </plugin>
-
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
