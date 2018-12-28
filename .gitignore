@@ -1,5 +1,6 @@
 # project #
 target/
+.flattened-pom.xml
 
 # intellij #
 .idea/
