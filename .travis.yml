@@ -8,3 +8,6 @@ cache:
 
 install: true
 script: make release
+
+after_success:
+  - bash <(curl --silent https://codecov.io/bash)
